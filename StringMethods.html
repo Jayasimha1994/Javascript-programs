@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <input type="button" value="ok" onclick="call()" />
+</body>
+<script>
+    function call()
+    {
+        var str = "Bangalore is a green city of india";
+        var s = str.slice(0, 9);
+        document.getElementById('p2').innerHTML = "slice() method string: "+s;
+        var s = str.split(" ");
+        var result="";
+        for (var i = 0; i <= s.length - 1; i++)
+        {
+            result += s[i]+"<br>";
+        }
+        document.getElementById('p1').innerHTML = "Split() method string: " + result;
+        var s1 = str.substr(0, 8);
+        document.getElementById('p3').innerHTML = "substr() method :"+s1;
+    }
+</script>
